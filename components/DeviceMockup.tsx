@@ -41,8 +41,11 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, children, clas
     // Constrain mockup widths on small screens to avoid horizontal overflow
     mobile: "w-full max-w-[min(92vw,340px)] aspect-[14/29] rounded-[40px] border-[12px] border-brand-rich shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden",
     tablet: "w-full max-w-[min(95vw,680px)] aspect-[4/3] rounded-[24px] border-[16px] border-brand-rich shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden",
-    desktop: "w-full max-w-[min(96vw,900px)] aspect-[8/5] rounded-[12px] border-t-[12px] border-x-[12px] border-b-[24px] border-brand-maroonDeep shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden"
+    desktop: "w-full max-w-[min(88vw,760px)] aspect-[16/10] rounded-[12px] border-t-[12px] border-x-[12px] border-b-[24px] border-brand-maroonDeep shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden"
   };
+
+  // Slightly scale down desktop mockups on very small screens to keep them in frame
+  const responsiveScale = type === 'desktop' ? 'md:scale-100 scale-[0.78] origin-top mx-auto' : '';
 
   const notch = {
     mobile: <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-brand-rich rounded-b-xl z-20" />,
@@ -55,7 +58,7 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, children, clas
   return (
     <motion.div
       ref={ref}
-      className={`relative ${className}`}
+      className={`relative ${responsiveScale} ${className}`}
       style={interactive ? { rotateX, rotateY, transformStyle: 'preserve-3d' } : {}}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}

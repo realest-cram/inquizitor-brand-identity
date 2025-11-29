@@ -21,7 +21,7 @@ export const MockupGallery: React.FC = () => {
         </div>
 
         {/* DESKTOP DASHBOARD MOCKUP */}
-        <div className="flex justify-center mb-32 relative z-10">
+        <div className="hidden md:flex justify-center mb-32 relative z-10">
           <DeviceMockup type="desktop">
             <div className="p-8 bg-gray-50 dark:bg-gray-900 min-h-full text-gray-900 dark:text-gray-100">
                {/* Dashboard Header */}
