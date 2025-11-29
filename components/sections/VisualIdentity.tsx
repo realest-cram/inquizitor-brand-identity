@@ -5,10 +5,21 @@ import { Check, Copy } from 'lucide-react';
 import { ColorSwatch, TypographySample } from '../../types';
 
 const COLORS: ColorSwatch[] = [
-  { name: 'Coral', hex: '#E07856', usage: 'Primary Brand Color', textColor: 'text-white' },
-  { name: 'Deep Navy', hex: '#1A1F3A', usage: 'Primary Text / UI', textColor: 'text-white' },
-  { name: 'Cream', hex: '#FAF8F5', usage: 'Backgrounds', textColor: 'text-brand-navy' },
-  { name: 'Purple', hex: '#8B5CF6', usage: 'Accents & Focus', textColor: 'text-white' },
+  { name: 'Deep Maroon', hex: '#6B0F1A', usage: 'Main brand, hero headline', textColor: 'text-white' },
+  { name: 'PUP Maroon', hex: '#800000', usage: 'Primary CTAs, key accents', textColor: 'text-white' },
+  { name: 'Rich Burgundy', hex: '#8B1538', usage: 'Links, hover states', textColor: 'text-white' },
+  { name: 'Warm Maroon', hex: '#A0283C', usage: 'Secondary hover, subtle overlays', textColor: 'text-white' },
+  { name: 'Charcoal', hex: '#1A1A1A', usage: 'Body text, deep surfaces', textColor: 'text-white' },
+  { name: 'Slate Gray', hex: '#4A4A4A', usage: 'Secondary text', textColor: 'text-white' },
+  { name: 'Soft Gray', hex: '#8E8E8E', usage: 'Tertiary text, borders', textColor: 'text-white' },
+  { name: 'Light Gray', hex: '#E8E8E8', usage: 'Dividers, subtle backgrounds', textColor: 'text-brand-maroonDeep' },
+  { name: 'Off-White', hex: '#FAF9F7', usage: 'Primary background', textColor: 'text-brand-maroonDeep' },
+  { name: 'Soft Cream', hex: '#F5EFE7', usage: 'Section backgrounds', textColor: 'text-brand-maroonDeep' },
+  { name: 'Gold', hex: '#D4AF37', usage: 'Highlights, achievements', textColor: 'text-brand-maroonDeep' },
+  { name: 'Success', hex: '#2D7A4F', usage: 'Positive states', textColor: 'text-white' },
+  { name: 'Warning', hex: '#D97706', usage: 'Caution states', textColor: 'text-white' },
+  { name: 'Error', hex: '#DC2626', usage: 'Errors', textColor: 'text-white' },
+  { name: 'Info Blue', hex: '#2563EB', usage: 'Information, tips', textColor: 'text-white' },
 ];
 
 const TYPOGRAPHY: TypographySample[] = [
@@ -38,13 +49,13 @@ export const VisualIdentity: React.FC = () => {
           className="mb-20"
         >
           <span className="text-brand-coral font-bold tracking-wider uppercase text-sm">Visual System</span>
-          <h2 className="text-4xl md:text-5xl font-display font-bold mt-2 text-brand-navy dark:text-white">Identity & Foundations</h2>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mt-2 text-brand-maroonDeep dark:text-white">Identity & Foundations</h2>
         </motion.div>
 
         {/* LOGO SYSTEM */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32">
           <div className="space-y-8">
-            <h3 className="text-2xl font-bold text-brand-navy dark:text-white">Logo Construction</h3>
+            <h3 className="text-2xl font-bold text-brand-maroonDeep dark:text-white">Logo Construction</h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
               The Inquizitor logo reimaginates the classic symbol of inquiry. A stylized magnifying glass frames a central star, representing the spark of insight found through exploration and learning.
             </p>
@@ -53,37 +64,37 @@ export const VisualIdentity: React.FC = () => {
                   {/* Grid Lines Overlay */}
                   <div className="absolute inset-0 grid grid-cols-4 grid-rows-4 opacity-10 pointer-events-none">
                      {[...Array(16)].map((_, i) => (
-                        <div key={i} className="border border-brand-navy dark:border-white"></div>
+                        <div key={i} className="border border-brand-maroonDeep dark:border-white"></div>
                      ))}
                   </div>
-                  <Logo className="w-32 h-32 text-brand-navy dark:text-white" />
+                  <Logo className="w-32 h-32 text-brand-coral dark:text-white" />
                </div>
             </div>
           </div>
 
           <div className="space-y-8">
              <div className="flex justify-between items-center">
-                <h3 className="text-2xl font-bold text-brand-navy dark:text-white">Logo Variants</h3>
+                <h3 className="text-2xl font-bold text-brand-maroonDeep dark:text-white">Logo Variants</h3>
                 <div className="flex bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
                     <button 
                       onClick={() => setLogoMode('light')}
-                      className={`px-4 py-1 rounded-md text-sm font-medium transition-all ${logoMode === 'light' ? 'bg-white text-brand-navy shadow-sm' : 'text-gray-500'}`}
+                      className={`px-4 py-1 rounded-md text-sm font-medium transition-all ${logoMode === 'light' ? 'bg-white text-brand-maroonDeep shadow-sm' : 'text-gray-500'}`}
                     >
                       Light
                     </button>
                     <button 
                       onClick={() => setLogoMode('dark')}
-                      className={`px-4 py-1 rounded-md text-sm font-medium transition-all ${logoMode === 'dark' ? 'bg-brand-navy text-white shadow-sm' : 'text-gray-500'}`}
+                      className={`px-4 py-1 rounded-md text-sm font-medium transition-all ${logoMode === 'dark' ? 'bg-brand-maroonDeep text-white shadow-sm' : 'text-gray-500'}`}
                     >
                       Dark
                     </button>
                 </div>
              </div>
-             <div className={`p-12 rounded-2xl transition-colors duration-500 flex flex-col gap-12 items-center justify-center ${logoMode === 'light' ? 'bg-brand-cream' : 'bg-brand-navy'}`}>
-                <Logo variant="full" color={logoMode === 'light' ? '#1A1F3A' : '#FAF8F5'} />
+             <div className={`p-12 rounded-2xl transition-colors duration-500 flex flex-col gap-12 items-center justify-center ${logoMode === 'light' ? 'bg-brand-cream' : 'bg-brand-maroonDeep'}`}>
+                <Logo variant="full" color={logoMode === 'light' ? '#800000' : '#FAF9F7'} />
                 <div className="flex gap-12 items-center">
-                   <Logo variant="icon" color={logoMode === 'light' ? '#1A1F3A' : '#FAF8F5'} className="w-12 h-12" />
-                   <Logo variant="vertical" color={logoMode === 'light' ? '#1A1F3A' : '#FAF8F5'} className="w-16 h-16" />
+                   <Logo variant="icon" color={logoMode === 'light' ? '#800000' : '#FAF9F7'} className="w-12 h-12" />
+                   <Logo variant="vertical" color={logoMode === 'light' ? '#800000' : '#FAF9F7'} className="w-16 h-16" />
                 </div>
              </div>
           </div>
@@ -91,7 +102,7 @@ export const VisualIdentity: React.FC = () => {
 
         {/* COLOR PALETTE */}
         <div className="mb-32">
-           <h3 className="text-2xl font-bold text-brand-navy dark:text-white mb-8">Color Palette</h3>
+           <h3 className="text-2xl font-bold text-brand-maroonDeep dark:text-white mb-8">Color Palette</h3>
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {COLORS.map((color) => (
                 <motion.div 
@@ -128,12 +139,12 @@ export const VisualIdentity: React.FC = () => {
 
         {/* TYPOGRAPHY */}
         <div>
-           <h3 className="text-2xl font-bold text-brand-navy dark:text-white mb-8">Typography</h3>
+           <h3 className="text-2xl font-bold text-brand-maroonDeep dark:text-white mb-8">Typography</h3>
            <div className="space-y-12 border-t border-gray-200 dark:border-gray-800 pt-8">
               {TYPOGRAPHY.map((type) => (
                 <div key={type.role} className="grid grid-cols-1 md:grid-cols-12 gap-8 items-baseline">
                    <div className="md:col-span-3">
-                      <p className="text-brand-coral font-bold uppercase text-sm tracking-wider">{type.role}</p>
+                      <p className="text-brand-rich font-bold uppercase text-sm tracking-wider">{type.role}</p>
                       <p className="text-gray-500 text-sm mt-1">{type.font} — {type.weight}</p>
                    </div>
                   <div className="md:col-span-9">
@@ -143,7 +154,7 @@ export const VisualIdentity: React.FC = () => {
                           fontSize: type.size,
                           fontWeight: type.weight.includes('700') ? 700 : type.weight.includes('600') ? 600 : 400
                         }}
-                        className="text-brand-navy dark:text-white leading-tight"
+                        className="text-brand-maroonDeep dark:text-white leading-tight"
                       >
                         {type.sample}
                       </p>

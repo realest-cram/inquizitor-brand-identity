@@ -15,11 +15,23 @@
           extend: {
             colors: {
               brand: {
-                coral: '#E07856',
-                navy: '#1A1F3A',
-                cream: '#FAF8F5',
-                purple: '#8B5CF6',
-                gray: '#F3F4F6'
+                maroonDeep: '#6B0F1A',
+                coral: '#800000',
+                warm: '#A0283C',
+                rich: '#8B1538',
+                purple: '#8B1538',
+                navy: '#1A1A1A',
+                slate: '#4A4A4A',
+                softGray: '#8E8E8E',
+                gray: '#E8E8E8',
+                cream: '#FAF9F7',
+                creamSoft: '#F5EFE7',
+                gold: '#D4AF37',
+                goldSoft: '#C9A961',
+                info: '#2563EB',
+                success: '#2D7A4F',
+                warning: '#D97706',
+                error: '#DC2626'
               }
             },
             fontFamily: {
@@ -33,27 +45,33 @@
     </script>
     <style>
       body {
-        background-color: #FAF8F5;
-        color: #1A1F3A;
+        background-color: #FAF9F7;
+        color: #1A1A1A;
         font-family: 'Outfit', sans-serif;
       }
       .dark body {
-        background-color: #0F111A;
-        color: #F3F4F6;
+        background-color: #1A1A1A;
+        color: #E8E8E8;
       }
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 10px;
       }
       ::-webkit-scrollbar-track {
-        background: transparent;
+        background: #FAF9F7;
       }
       ::-webkit-scrollbar-thumb {
-        background: #E07856;
+        background: #F5EFE7;
         border-radius: 5px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #c06040;
+        background: #F5EFE7;
+      }
+      .hide-scrollbar {
+        scrollbar-width: none;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
       }
     </style>
   <script type="importmap">

@@ -38,16 +38,18 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, children, clas
   };
 
   const frameStyles = {
-    mobile: "w-[280px] h-[580px] rounded-[40px] border-[12px] border-brand-navy shadow-2xl bg-white relative overflow-hidden",
-    tablet: "w-[600px] h-[450px] rounded-[24px] border-[16px] border-brand-navy shadow-2xl bg-white relative overflow-hidden",
-    desktop: "w-[800px] h-[500px] rounded-[12px] border-t-[12px] border-x-[12px] border-b-[24px] border-gray-800 shadow-2xl bg-white relative overflow-hidden"
+    mobile: "w-[280px] h-[580px] rounded-[40px] border-[12px] border-brand-rich shadow-2xl bg-white relative overflow-hidden",
+    tablet: "w-[600px] h-[450px] rounded-[24px] border-[16px] border-brand-rich shadow-2xl bg-white relative overflow-hidden",
+    desktop: "w-[800px] h-[500px] rounded-[12px] border-t-[12px] border-x-[12px] border-b-[24px] border-brand-maroonDeep shadow-2xl bg-white relative overflow-hidden"
   };
 
   const notch = {
-    mobile: <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-brand-navy rounded-b-xl z-20" />,
+    mobile: <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-brand-rich rounded-b-xl z-20" />,
     tablet: <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 mt-2 bg-gray-800 rounded-full z-20" />, // Camera
     desktop: <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 mt-1 bg-gray-600 rounded-full z-20" /> // Webcam
   };
+
+  const contentScrollClass = type === 'mobile' ? 'hide-scrollbar' : '';
 
   return (
     <motion.div
@@ -73,7 +75,7 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, children, clas
                 <div className="w-3 h-3 rounded-full bg-green-400" />
              </div>
           )}
-          <div className="flex-1 overflow-y-auto scrollbar-hide">
+          <div className={`flex-1 overflow-y-auto ${contentScrollClass}`}>
             {children}
           </div>
         </div>

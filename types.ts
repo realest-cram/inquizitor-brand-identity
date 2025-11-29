@@ -8,7 +8,7 @@ export interface ColorSwatch {
   hex: string;
   pantone?: string;
   usage: string;
-  textColor: 'text-white' | 'text-brand-navy';
+  textColor: 'text-white' | 'text-brand-maroonDeep';
 }
 
 export interface TypographySample {

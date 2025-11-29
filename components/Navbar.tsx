@@ -6,8 +6,7 @@ import { Menu, X, Moon, Sun } from 'lucide-react';
 const NAV_ITEMS: NavItem[] = [
   { label: 'Story', href: '#brand-story' },
   { label: 'Visuals', href: '#visual-identity' },
-  { label: 'Mockups', href: '#mockups' },
-  { label: 'Resources', href: '#resources' },
+  { label: 'Mockups', href: '#mockups' }
 ];
 
 export const Navbar: React.FC = () => {
@@ -37,8 +36,8 @@ export const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a href="#" className="flex items-center gap-2 group">
-          <Logo variant="icon" className="w-8 h-8 text-brand-navy dark:text-white group-hover:rotate-12 transition-transform duration-300" />
-          <span className="font-display font-bold text-xl tracking-tight text-brand-navy dark:text-white">INQUIZITOR</span>
+          <Logo variant="icon" className="w-8 h-8 text-brand-coral dark:text-white group-hover:rotate-12 transition-transform duration-300" />
+          <span className="font-display font-bold text-xl tracking-tight text-brand-maroonDeep dark:text-white">INQUIZITOR</span>
         </a>
 
         {/* Desktop Nav */}
@@ -47,7 +46,7 @@ export const Navbar: React.FC = () => {
             <a 
               key={item.label} 
               href={item.href}
-              className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-coral transition-colors"
+              className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-brand-rich transition-colors"
             >
               {item.label}
             </a>
@@ -59,14 +58,14 @@ export const Navbar: React.FC = () => {
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
-          <button className="px-5 py-2.5 bg-brand-navy dark:bg-brand-cream text-white dark:text-brand-navy rounded-full text-sm font-bold hover:opacity-90 transition-opacity">
+          <button className="px-5 py-2.5 bg-brand-coral dark:bg-brand-warm text-white rounded-full text-sm font-bold hover:bg-brand-warm transition-colors">
             Download Guidelines
           </button>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button 
-          className="md:hidden text-brand-navy dark:text-white"
+          className="md:hidden text-brand-coral dark:text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X /> : <Menu />}
@@ -80,7 +79,7 @@ export const Navbar: React.FC = () => {
             <a 
               key={item.label} 
               href={item.href}
-              className="text-lg font-medium text-brand-navy dark:text-white"
+              className="text-lg font-medium text-brand-maroonDeep dark:text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.label}

@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-brand-cream dark:bg-brand-navy transition-colors duration-500">
+    <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-brand-cream to-brand-creamSoft dark:bg-brand-maroonDeep transition-colors duration-500">
       
       {/* Background Abstract Elements */}
       <motion.div 
@@ -18,7 +18,7 @@ export const Hero: React.FC = () => {
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       />
       <motion.div 
-        className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-brand-navy/5 dark:bg-brand-coral/5 blur-3xl"
+        className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-brand-rich/5 dark:bg-brand-coral/5 blur-3xl"
         animate={{ scale: [1.2, 1, 1.2], rotate: [0, -45, 0] }}
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
       />
@@ -30,13 +30,13 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8 flex justify-center"
         >
-          <div className="w-32 h-32 md:w-48 md:h-48 text-brand-navy dark:text-brand-cream">
+          <div className="w-32 h-32 md:w-48 md:h-48 text-brand-coral dark:text-brand-cream">
             <Logo variant="icon" className="w-full h-full" animated />
           </div>
         </motion.div>
 
         <motion.h1 
-          className="font-display text-5xl md:text-7xl font-bold text-brand-navy dark:text-brand-cream mb-6 tracking-tight"
+          className="font-display text-5xl md:text-7xl font-bold text-brand-maroonDeep dark:text-brand-cream mb-6 tracking-tight"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
         </motion.h1>
 
         <motion.p 
-          className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-light"
+          className="text-xl md:text-2xl text-brand-slate dark:text-gray-300 max-w-2xl mx-auto font-light"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
@@ -55,7 +55,7 @@ export const Hero: React.FC = () => {
       </motion.div>
 
       <motion.div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer text-brand-navy dark:text-brand-cream"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer text-brand-maroonDeep dark:text-brand-cream"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
         onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
