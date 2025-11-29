@@ -38,9 +38,10 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, children, clas
   };
 
   const frameStyles = {
-    mobile: "w-[280px] h-[580px] rounded-[40px] border-[12px] border-brand-rich shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden",
-    tablet: "w-[600px] h-[450px] rounded-[24px] border-[16px] border-brand-rich shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden",
-    desktop: "w-[800px] h-[500px] rounded-[12px] border-t-[12px] border-x-[12px] border-b-[24px] border-brand-maroonDeep shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden"
+    // Constrain mockup widths on small screens to avoid horizontal overflow
+    mobile: "w-full max-w-[min(92vw,340px)] aspect-[14/29] rounded-[40px] border-[12px] border-brand-rich shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden",
+    tablet: "w-full max-w-[min(95vw,680px)] aspect-[4/3] rounded-[24px] border-[16px] border-brand-rich shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden",
+    desktop: "w-full max-w-[min(96vw,900px)] aspect-[8/5] rounded-[12px] border-t-[12px] border-x-[12px] border-b-[24px] border-brand-maroonDeep shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden"
   };
 
   const notch = {
