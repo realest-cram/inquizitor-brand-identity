@@ -10,7 +10,7 @@ import { ArrowRight, Download, Share2, Layers } from 'lucide-react';
 const BrandStory = () => (
   <section id="brand-story" className="py-24 bg-white dark:bg-gray-900 px-6">
     <div className="max-w-4xl mx-auto text-center">
-       <span className="text-brand-coral font-bold tracking-wider uppercase text-sm mb-4 block">Our Mission</span>
+       <span className="text-brand-coral font-accent font-semibold tracking-wider uppercase text-sm mb-4 block">Our Mission</span>
        <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-navy dark:text-white mb-8 leading-tight">
           To empower global learners through <br className="hidden md:block"/> clarity, accessibility, and intelligence.
        </h2>

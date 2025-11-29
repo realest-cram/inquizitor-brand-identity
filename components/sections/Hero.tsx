@@ -50,7 +50,7 @@ export const Hero: React.FC = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          AI-Powered Learning, <span className="text-brand-coral font-medium">Beautifully Designed</span>
+          AI-Powered Learning, <span className="text-brand-coral font-accent font-semibold">Beautifully Designed</span>
         </motion.p>
       </motion.div>
 

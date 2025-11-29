@@ -12,9 +12,10 @@ const COLORS: ColorSwatch[] = [
 ];
 
 const TYPOGRAPHY: TypographySample[] = [
-  { role: 'Display', font: 'Space Grotesk', weight: 'Bold (700)', size: '64px', sample: 'AI-Powered Learning' },
-  { role: 'Heading', font: 'Inter', weight: 'SemiBold (600)', size: '32px', sample: 'Design Philosophy' },
-  { role: 'Body', font: 'Inter', weight: 'Regular (400)', size: '16px', sample: 'Inquizitor transforms the way we assess knowledge through intelligent design.' },
+  { role: 'Display', font: 'Outfit', weight: 'Bold (700)', size: '64px', sample: 'AI-Powered Learning' },
+  { role: 'Headings', font: 'Outfit', weight: 'SemiBold (600)', size: '32px', sample: 'Design Philosophy' },
+  { role: 'Body', font: 'Outfit', weight: 'Regular (400)', size: '16px', sample: 'Inquizitor transforms the way we assess knowledge through intelligent design.' },
+  { role: 'Accent', font: 'Crimson Pro', weight: 'SemiBold (600)', size: '20px', sample: 'Editorial emphasis & pull quotes.' },
 ];
 
 export const VisualIdentity: React.FC = () => {
@@ -135,10 +136,10 @@ export const VisualIdentity: React.FC = () => {
                       <p className="text-brand-coral font-bold uppercase text-sm tracking-wider">{type.role}</p>
                       <p className="text-gray-500 text-sm mt-1">{type.font} — {type.weight}</p>
                    </div>
-                   <div className="md:col-span-9">
-                      <p 
-                        style={{ 
-                          fontFamily: type.font === 'Space Grotesk' ? '"Space Grotesk", sans-serif' : '"Inter", sans-serif',
+                  <div className="md:col-span-9">
+                     <p 
+                       style={{ 
+                          fontFamily: type.font === 'Crimson Pro' ? '"Crimson Pro", serif' : '"Outfit", sans-serif',
                           fontSize: type.size,
                           fontWeight: type.weight.includes('700') ? 700 : type.weight.includes('600') ? 600 : 400
                         }}
