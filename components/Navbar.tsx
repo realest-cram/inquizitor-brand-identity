@@ -58,9 +58,6 @@ export const Navbar: React.FC = () => {
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
-          <button className="px-5 py-2.5 bg-brand-coral dark:bg-brand-warm text-white rounded-full text-sm font-bold hover:bg-brand-warm transition-colors">
-            Download Guidelines
-          </button>
         </div>
 
         {/* Mobile Menu Toggle */}

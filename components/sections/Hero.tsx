@@ -9,15 +9,15 @@ export const Hero: React.FC = () => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-brand-cream to-brand-creamSoft dark:bg-brand-maroonDeep transition-colors duration-500">
-      
+    <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-brand-cream to-brand-creamSoft dark:bg-gradient-to-br dark:from-brand-maroonDeep dark:to-brand-rich transition-colors duration-500">
+
       {/* Background Abstract Elements */}
-      <motion.div 
+      <motion.div
         className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-brand-coral/10 blur-3xl"
         animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       />
-      <motion.div 
+      <motion.div
         className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-brand-rich/5 dark:bg-brand-coral/5 blur-3xl"
         animate={{ scale: [1.2, 1, 1.2], rotate: [0, -45, 0] }}
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
@@ -35,7 +35,7 @@ export const Hero: React.FC = () => {
           </div>
         </motion.div>
 
-        <motion.h1 
+        <motion.h1
           className="font-display text-5xl md:text-7xl font-bold text-brand-maroonDeep dark:text-brand-cream mb-6 tracking-tight"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -44,17 +44,17 @@ export const Hero: React.FC = () => {
           INQUIZITOR
         </motion.h1>
 
-        <motion.p 
+        <motion.p
           className="text-xl md:text-2xl text-brand-slate dark:text-gray-300 max-w-2xl mx-auto font-light"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          AI-Powered Learning, <span className="text-brand-coral font-accent font-semibold">Beautifully Designed</span>
+          AI-Powered Learning, Beautifully Designed
         </motion.p>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer text-brand-maroonDeep dark:text-brand-cream"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}

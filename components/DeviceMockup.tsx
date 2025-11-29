@@ -38,9 +38,9 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, children, clas
   };
 
   const frameStyles = {
-    mobile: "w-[280px] h-[580px] rounded-[40px] border-[12px] border-brand-rich shadow-2xl bg-white relative overflow-hidden",
-    tablet: "w-[600px] h-[450px] rounded-[24px] border-[16px] border-brand-rich shadow-2xl bg-white relative overflow-hidden",
-    desktop: "w-[800px] h-[500px] rounded-[12px] border-t-[12px] border-x-[12px] border-b-[24px] border-brand-maroonDeep shadow-2xl bg-white relative overflow-hidden"
+    mobile: "w-[280px] h-[580px] rounded-[40px] border-[12px] border-brand-rich shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden",
+    tablet: "w-[600px] h-[450px] rounded-[24px] border-[16px] border-brand-rich shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden",
+    desktop: "w-[800px] h-[500px] rounded-[12px] border-t-[12px] border-x-[12px] border-b-[24px] border-brand-maroonDeep shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden"
   };
 
   const notch = {
@@ -67,9 +67,9 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({ type, children, clas
         {notch[type]}
         
         {/* Screen Content */}
-        <div className="w-full h-full overflow-hidden bg-gray-50 flex flex-col">
+        <div className="w-full h-full overflow-hidden bg-gray-50 dark:bg-gray-950 flex flex-col">
           {type === 'desktop' && (
-             <div className="h-6 bg-gray-100 border-b border-gray-200 flex items-center px-4 gap-2">
+             <div className="h-6 bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 flex items-center px-4 gap-2">
                 <div className="w-3 h-3 rounded-full bg-red-400" />
                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                 <div className="w-3 h-3 rounded-full bg-green-400" />
